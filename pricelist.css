@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+header {
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+header > .dashboard img {
+    display: block;
+    max-width: 100%;
+}
+
+.dashboard {
+    justify-content: center;
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 1rem; 
+}
+
+.image {
+    width: 45vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.title h2 {
+    color: rgb(174, 6, 200);
+}
+
+.list {
+    display: flex;
+}
+
+/* List starts */
+
+.figure-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+}
+
+.figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    max-width: 800px; 
+    height: auto; 
+}
+
+.figure-container:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 110%;
+    min-height: 200px; 
+    border-radius: 200px;
+    background-color: rgba(36, 35, 36, 0.936);
+    border: 1px solid white;
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.851);
+}
+
+.rectangle:hover {
+    box-shadow: 0px 0px 35px rgb(198, 0, 252);
+    background-color: rgb(21, 21, 21);
+}
+
+.circle {
+    position: absolute;
+    width: 80px;
+    height: 80px; 
+    border-radius: 50%;
+    top: 25px; 
+    left: 10px; 
+    transform: translateX(-50%);
+    background-color: rgb(249, 205, 252);
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+    font-weight: bold;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.5s ease-in-out;
+    color: rgba(14, 12, 77, 0.649);
+}
+
+.figure:hover .circle {
+    background-color: #d1a6e7;
+}
+
+.rect-img {
+    height: 150px;
+    width: 150px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px; 
+    margin-right: 5px;
+}
+
+/* List contents */
+
+div > h3 {
+    font-size: 1.5rem;
+    color: rgb(255, 223, 254);
+}
+
+.section {
+    padding: 1rem;
+    flex: 1;
+    color: rgba(255, 255, 255, 0.858);
+}
+
+.item-name {
+    margin: 1rem; 
+    font-size: 18px; 
+    text-align: left;
+}
+
+.label {
+    color: rgb(247, 231, 255);
+    font-weight: bold;
+    font-size: large; 
+}
+
+.description {
+    text-align: left;
+    border-top: 1px solid rgb(255, 220, 144);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+b {
+    float: right;
+    margin-top: -25px;
+    color: rgb(247, 179, 249);
+}
+
+/* footer */
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; 
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+footer img {
+    display: block;
+    padding: 2px;
+}
+
+footer p {
+    text-align: right;
+    margin: 0;
+    flex: 1 1 100%;
+}
+
+/* TRIALS */
+body {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav ul li a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 131, 238);
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgb(251, 134, 237);
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px #e698f4, 0 0 10px #e698f4;
+    }
+    50% {
+        text-shadow: 0 0 15px #f1d0ff, 0 0 30px #f1d0ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #e698f4, 0 0 10px #e698f4;
+    }
+}
+
+body{
+    background-color: #f2f0f3;
+background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M81.28 88H68.413l19.298 19.298L81.28 88zm2.107 0h13.226L90 107.838 83.387 88zm15.334 0h12.866l-19.298 19.298L98.72 88zm-32.927-2.207L73.586 78h32.827l.5.5 7.294 7.293L115.414 87l-24.707 24.707-.707.707L64.586 87l1.207-1.207zm2.62.207L74 80.414 79.586 86H68.414zm16 0L90 80.414 95.586 86H84.414zm16 0L106 80.414 111.586 86h-11.172zm-8-6h11.173L98 85.586 92.414 80zM82 85.586L87.586 80H76.414L82 85.586zM17.414 0L.707 16.707 0 17.414V0h17.414zM4.28 0L0 12.838V0h4.28zm10.306 0L2.288 12.298 6.388 0h8.198zM180 17.414L162.586 0H180v17.414zM165.414 0l12.298 12.298L173.612 0h-8.198zM180 12.838L175.72 0H180v12.838zM0 163h16.413l.5.5 7.294 7.293L25.414 172l-8 8H0v-17zm0 10h6.613l-2.334 7H0v-7zm14.586 7l7-7H8.72l-2.333 7h8.2zM0 165.414L5.586 171H0v-5.586zM10.414 171L16 165.414 21.586 171H10.414zm-8-6h11.172L8 170.586 2.414 165zM180 163h-16.413l-7.794 7.793-1.207 1.207 8 8H180v-17zm-14.586 17l-7-7h12.865l2.333 7h-8.2zM180 173h-6.613l2.334 7H180v-7zm-21.586-2l5.586-5.586 5.586 5.586h-11.172zM180 165.414L174.414 171H180v-5.586zm-8 5.172l5.586-5.586h-11.172l5.586 5.586zM152.933 25.653l1.414 1.414-33.94 33.942-1.416-1.416 33.943-33.94zm1.414 127.28l-1.414 1.414-33.942-33.94 1.416-1.416 33.94 33.943zm-127.28 1.414l-1.414-1.414 33.94-33.942 1.416 1.416-33.943 33.94zm-1.414-127.28l1.414-1.414 33.942 33.94-1.416 1.416-33.94-33.943zM0 85c2.21 0 4 1.79 4 4s-1.79 4-4 4v-8zm180 0c-2.21 0-4 1.79-4 4s1.79 4 4 4v-8zM94 0c0 2.21-1.79 4-4 4s-4-1.79-4-4h8zm0 180c0-2.21-1.79-4-4-4s-4 1.79-4 4h8z' fill='%23b2acb2' fill-opacity='0.39' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
